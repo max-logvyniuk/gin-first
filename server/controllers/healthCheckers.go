@@ -120,7 +120,9 @@ func HealthResponceAddsvc() gin.HandlerFunc {
 		}
 
 		n, err := t.Write(resJson)
-		// n, err := t.Write([]byte("hello\n"))
+		// d := []byte("hello ----- this is kiss\n")
+		// fmt.Println("Test data d ----", d)
+		// n, err := t.Write(d)
 
 		fmt.Println("HealthResponceAddsvc clother func 3---", n)
 
@@ -129,7 +131,7 @@ func HealthResponceAddsvc() gin.HandlerFunc {
 			return
 		}
 
-		buf := make([]byte, 100)
+		buf := make([]byte, 1000000)
 
 		fmt.Println("HealthResponceAddsvc clother func 3.5---", n)
 

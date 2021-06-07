@@ -9,7 +9,8 @@ func TlsTcpConn() (*tls.Conn, error) {
 	log.SetFlags(log.Lshortfile)
 
 	conf := &tls.Config{
-		InsecureSkipVerify: true,
+		InsecureSkipVerify:          true,
+		DynamicRecordSizingDisabled: true,
 	}
 
 	conn, err := tls.Dial("tcp", "127.0.0.1:4444", conf)
